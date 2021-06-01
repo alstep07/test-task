@@ -43,7 +43,7 @@
     font: 400 1rem / 1.5rem @font-secondary;
     border: none;
     border-radius: 4px;
-    background: no-repeat url('../../icons/search.svg') 1rem ;
+    background: no-repeat url('../../images/icons/search.svg') 1rem ;
     outline: none;
     .shadow();
 
@@ -118,8 +118,15 @@
 }
 
 .courses {
+  width: 100%;
   padding: 2rem 0;
-  display: grid;
-  grid-gap: 2rem;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+
+  &__item {
+    width: 100%;
+    max-width: 400px;
+  }
 }
