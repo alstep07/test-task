@@ -1,7 +1,7 @@
 // main: ../style.less
 
 .main {
-  padding: 2.5rem 1rem;
+  padding: 2.5rem 5%;
 
   @media @tablet {
     padding-right: 3.125rem;
@@ -10,6 +10,7 @@
 
   &__wrapper {
     max-width: @max-width;
+    margin: auto;
   }
 
   &__title {
@@ -42,13 +43,20 @@
     font: 400 1rem / 1.5rem @font-secondary;
     border: none;
     border-radius: 4px;
-    box-shadow: 0px 4px 16px 0px fadeout(@shadow-color, 92%), 0px 4px 4px 0px fadeout(@shadow-color, 96%);
     background: no-repeat url('../../icons/search.svg') 1rem ;
+    outline: none;
+    .shadow();
+
+    &:focus {
+      box-shadow: 0 0 0 2px @primary-color;
+    }
   }
 
   &__country {
+    margin-top: 1rem;
 
     @media @tablet {
+      margin-top: 0;
       margin-left: 1.25rem;
     }
   }
@@ -61,8 +69,8 @@
   display: flex;
   flex-direction: column;
   border-radius: 4px;
-  box-shadow: 0px 4px 16px 0px fadeout(@shadow-color, 92%), 0px 4px 4px 0px fadeout(@shadow-color, 96%);
   overflow: hidden;
+  .shadow();
 
   @media @tablet {
     width: 16.25rem;
@@ -91,6 +99,7 @@
   &__close,
   &__open {
     position: absolute;
+    padding: 0;
     top: 50%;
     transform: translateY(-50%);
     display: block;
@@ -100,10 +109,17 @@
   }
 
   &__open {
-    right: .5rem;
+    right: 1rem;
   }
 
   &__close {
-    right: 2.3rem;
+    right: 3rem;
   }
+}
+
+.courses {
+  padding: 2rem 0;
+  display: grid;
+  grid-gap: 2rem;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
 }

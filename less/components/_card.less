@@ -1,0 +1,28 @@
+// main: ../style.less
+
+.card {
+  position: relative;
+  height: 400px;
+  padding: 5.5rem 1.25rem 1.25rem;
+  border-radius: 8px;
+  .shadow();
+  background: no-repeat url('../../icons/backgrounds/desert.png') top / contain;
+
+  &__progress {
+    position: absolute;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 1.5rem;
+    background-color: @progress-color;
+    border-top-right-radius: 8px;
+    border-top-left-radius: 8px;
+    -webkit-clip-path: inset(0 88% 0 0);
+    clip-path: inset(0 88% 0 0);
+  }
+
+  .title {
+    
+  }
+}

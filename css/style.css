@@ -19,7 +19,7 @@ select::-ms-expand {
   box-shadow: 0px 1px 0px 0px rgba(51, 51, 51, 0.1);
 }
 .header__wrapper {
-  max-width: 1366px;
+  max-width: 1295px;
   margin: auto;
   padding: 1.125rem 1.5rem;
   display: flex;
@@ -99,7 +99,7 @@ select::-ms-expand {
   text-align: center;
 }
 .main {
-  padding: 2.5rem 1rem;
+  padding: 2.5rem 5%;
 }
 @media (min-width: 670px) {
   .main {
@@ -108,7 +108,8 @@ select::-ms-expand {
   }
 }
 .main__wrapper {
-  max-width: 1366px;
+  max-width: 1295px;
+  margin: auto;
 }
 .main__title {
   margin: 0;
@@ -137,11 +138,19 @@ select::-ms-expand {
   font: 400 1rem / 1.5rem 'Roboto', sans-serif;
   border: none;
   border-radius: 4px;
-  box-shadow: 0px 4px 16px 0px rgba(51, 51, 51, 0.08), 0px 4px 4px 0px rgba(51, 51, 51, 0.04);
   background: no-repeat url('../../icons/search.svg') 1rem;
+  outline: none;
+  box-shadow: 0px 4px 16px 0px rgba(51, 51, 51, 0.08), 0px 4px 4px 0px rgba(51, 51, 51, 0.04);
+}
+.form__search-input:focus {
+  box-shadow: 0 0 0 2px #6e41e2;
+}
+.form__country {
+  margin-top: 1rem;
 }
 @media (min-width: 670px) {
   .form__country {
+    margin-top: 0;
     margin-left: 1.25rem;
   }
 }
@@ -152,8 +161,8 @@ select::-ms-expand {
   display: flex;
   flex-direction: column;
   border-radius: 4px;
-  box-shadow: 0px 4px 16px 0px rgba(51, 51, 51, 0.08), 0px 4px 4px 0px rgba(51, 51, 51, 0.04);
   overflow: hidden;
+  box-shadow: 0px 4px 16px 0px rgba(51, 51, 51, 0.08), 0px 4px 4px 0px rgba(51, 51, 51, 0.04);
 }
 @media (min-width: 670px) {
   .country {
@@ -180,6 +189,7 @@ select::-ms-expand {
 .country__close,
 .country__open {
   position: absolute;
+  padding: 0;
   top: 50%;
   transform: translateY(-50%);
   display: block;
@@ -188,8 +198,35 @@ select::-ms-expand {
   cursor: pointer;
 }
 .country__open {
-  right: 0.5rem;
+  right: 1rem;
 }
 .country__close {
-  right: 2.3rem;
+  right: 3rem;
+}
+.courses {
+  padding: 2rem 0;
+  display: grid;
+  grid-gap: 2rem;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+.card {
+  position: relative;
+  height: 400px;
+  padding: 5.5rem 1.25rem 1.25rem;
+  border-radius: 8px;
+  box-shadow: 0px 4px 16px 0px rgba(51, 51, 51, 0.08), 0px 4px 4px 0px rgba(51, 51, 51, 0.04);
+  background: no-repeat url('../../icons/backgrounds/desert.png') top / contain;
+}
+.card__progress {
+  position: absolute;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 1.5rem;
+  background-color: #27ae60;
+  border-top-right-radius: 8px;
+  border-top-left-radius: 8px;
+  -webkit-clip-path: inset(0 88% 0 0);
+  clip-path: inset(0 88% 0 0);
 }
