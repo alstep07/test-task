@@ -1,7 +1,12 @@
 // main: ../style.less
 
 .main {
-  padding: 2.5rem 3.125rem;
+  padding: 2.5rem 1rem;
+
+  @media @tablet {
+    padding-right: 3.125rem;
+    padding-left: 3.125rem;
+  }
 
   &__wrapper {
     max-width: @max-width;
@@ -25,25 +30,47 @@
 
 .form {
   display: flex;
+  flex-direction: column;
+
+  @media @tablet {
+    flex-direction: row;
+  }
 
   &__search-input {
     width: 100%;
-    padding: 1rem;
+    padding: 1rem 2.5rem;
     font: 400 1rem / 1.5rem @font-secondary;
     border: none;
     border-radius: 4px;
     box-shadow: 0px 4px 16px 0px fadeout(@shadow-color, 92%), 0px 4px 4px 0px fadeout(@shadow-color, 96%);
+    background: no-repeat url('../../icons/search.svg') 1rem ;
   }
 
   &__country {
-    margin-left: 1.25rem;
+
+    @media @tablet {
+      margin-left: 1.25rem;
+    }
   }
 }
 
 .country {
+  position: relative;
+  width: 100%;
   padding: .375rem 1rem;
+  display: flex;
+  flex-direction: column;
   border-radius: 4px;
   box-shadow: 0px 4px 16px 0px fadeout(@shadow-color, 92%), 0px 4px 4px 0px fadeout(@shadow-color, 96%);
+  overflow: hidden;
+
+  @media @tablet {
+    width: 16.25rem;
+  }
+
+  &:focus-within {
+    box-shadow: 0 0 0 2px @primary-color;
+  }
 
   &__title {
     font: 400 .8rem / 1.25rem @font-secondary;
@@ -58,5 +85,25 @@
     appearance: none;
     box-shadow: none;
     border: none;
+    outline: none;
+  }
+
+  &__close,
+  &__open {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    display: block;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+  }
+
+  &__open {
+    right: .5rem;
+  }
+
+  &__close {
+    right: 2.3rem;
   }
 }
