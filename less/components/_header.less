@@ -1,0 +1,57 @@
+// main: ../style.less
+
+.header {
+  width: 100%;
+  padding: 1.125rem 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0px 1px 0px 0px fadeout(@shadow-color, 90%);
+
+  @media @tablet {
+  }
+
+  &__logo {
+    font: 700 1.5rem / 2rem @font-primary;
+    color: @text-color-dark;
+    text-decoration: none;
+  }
+}
+
+.navigation {
+  margin-left: auto;
+  margin-right: 3.5rem;
+
+  &__list {
+    display: flex;
+  }
+
+  &__item:not(:last-child) {
+    margin-right: 1.5rem;
+  }
+
+  &__link {
+    font: 400 1rem / 1.5rem @font-primary;
+    color: @text-color-mid;
+  }
+}
+
+.user {
+  display: flex;
+  align-items: center;
+
+  &__name {
+    margin-right: 0.75rem;
+    font: 400 1rem / 1.5rem @font-primary;
+    color: @primary-color;
+  }
+
+  &__photo {
+    .circle(2.75rem);
+    display: block;
+    background-color: @photo-bg-color;
+    font-size: 1.2rem;
+    line-height: 2.75rem;
+    text-align: center;
+  }
+}
