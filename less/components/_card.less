@@ -3,8 +3,8 @@
 .card {
   position: relative;
   width: 100%;
-  height: 21.7rem;
-  padding: 5.5rem 1.25rem 1.25rem;
+  min-height: 21.7rem;
+  padding: 5.5rem 1.25rem;
   border-radius: 8px;
   .shadow();
 
@@ -63,6 +63,33 @@
 
   &__description {
     margin-top: .75rem;
+  }
+
+  &__buttons {
+    position: absolute;
+    bottom: 1.25rem;
+    left: 1.25rem;
+  }
+
+  &__button {
+    padding: .625rem 1.25rem;
+    font: 400 1rem / 1.5rem @font-secondary;
+    color: @primary-color;
+    background-color: transparent;
+    border: 2px solid transparent;
+    border-radius: 4px;
+    cursor: pointer;
+
+    @media @desktop {
+      &:hover {
+        color: @text-color-light;
+        background-color: @primary-color;
+      }
+    }
+
+    &--bordered {
+      border-color: @primary-color;
+    }
   }
 }
 
