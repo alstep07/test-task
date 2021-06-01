@@ -1,0 +1,62 @@
+// main: ../style.less
+
+.main {
+  padding: 2.5rem 3.125rem;
+
+  &__wrapper {
+    max-width: @max-width;
+  }
+
+  &__title {
+    margin: 0;
+    font: 700 2.5rem / 3rem @font-primary;
+  }
+
+  &__subtitle {
+    max-width: 45rem;
+    margin: .75rem 0 0;
+    font: 400 1rem / 1.5rem @font-secondary;
+  }
+
+  &__form {
+    margin-top: 2rem;
+  }
+}
+
+.form {
+  display: flex;
+
+  &__search-input {
+    width: 100%;
+    padding: 1rem;
+    font: 400 1rem / 1.5rem @font-secondary;
+    border: none;
+    border-radius: 4px;
+    box-shadow: 0px 4px 16px 0px fadeout(@shadow-color, 92%), 0px 4px 4px 0px fadeout(@shadow-color, 96%);
+  }
+
+  &__country {
+    margin-left: 1.25rem;
+  }
+}
+
+.country {
+  padding: .375rem 1rem;
+  border-radius: 4px;
+  box-shadow: 0px 4px 16px 0px fadeout(@shadow-color, 92%), 0px 4px 4px 0px fadeout(@shadow-color, 96%);
+
+  &__title {
+    font: 400 .8rem / 1.25rem @font-secondary;
+    color: @text-color-mid;
+  }
+
+  &__select {
+    font: 400 1rem / 1.5rem @font-secondary;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    appearance: none;
+    box-shadow: none;
+    border: none;
+  }
+}

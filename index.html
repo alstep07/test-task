@@ -14,19 +14,42 @@
 
 <body>
   <header class="header">
-    <a href="#" class="header__logo">Logo</a>
-    <nav class="header__navigation navigation">
-      <ul class="navigation__list">
-        <li class="navigation__item"><a href="#" class="navigation__link">Free test</a></li>
-        <li class="navigation__item"><a href="#" class="navigation__link">Catalog</a></li>
-        <li class="navigation__item"><a href="#" class="navigation__link">Help</a></li>
-      </ul>
-    </nav>
-    <a href="#" class="header__user user">
-      <span class="user__name">Michael Browk</span>
-      <span class="user__photo">🦁</span>
-    </a>
+    <div class="header__wrapper">
+      <a href="#" class="header__logo">Logo</a>
+      <nav class="header__navigation navigation">
+        <ul class="navigation__list">
+          <li class="navigation__item"><a href="#" class="navigation__link">Free test</a></li>
+          <li class="navigation__item"><a href="#" class="navigation__link">Catalog</a></li>
+          <li class="navigation__item"><a href="#" class="navigation__link">Help</a></li>
+        </ul>
+      </nav>
+      <a href="https://github.com/alstep07" class="header__user user">
+        <span class="user__name">Michael Browk</span>
+        <span class="user__photo">🦁</span>
+      </a>
+    </div>
   </header>
+
+  <main class="main">
+    <div class="main__wrapper">
+      <h1 class="main__title">Course catalog</h1>
+      <p class="main__subtitle">Each course contains video lectures, tasks, and text materials. All courses viewed by
+        you
+        are displayed in your personal account</p>
+      <form action="#" class="main__form form">
+        <input class="form__search-input" type="text" name="search" id="search" aria-label="Search"
+          placeholder="Search">
+        <label class="form__country country">
+          <span class="country__title">Your country</span>
+          <select class="country__select" name="country" id="country">
+            <option value="usa">USA</option>
+            <option value="usa">Ukraine</option>
+          </select>
+        </label>
+      </form>
+    </div>
+
+  </main>
 </body>
 
 </html>
