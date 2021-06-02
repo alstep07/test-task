@@ -17,8 +17,8 @@
   <header class="header">
     <div class="header__wrapper">
       <a href="#" class="header__logo">Logo</a>
-      <nav class="header__navigation navigation">
-        <ul class="navigation__list">
+      <nav class="header__navigation">
+        <ul class="navigation">
           <li class="navigation__item"><a href="#" class="navigation__link">Free test</a></li>
           <li class="navigation__item"><a href="#" class="navigation__link">Catalog</a></li>
           <li class="navigation__item"><a href="#" class="navigation__link">Help</a></li>
@@ -32,15 +32,15 @@
   </header>
 
   <main class="main">
-    <div class="main__wrapper">
+    <section class="main__content">
       <h1 class="main__title">Course catalog</h1>
       <p class="main__subtitle">Each course contains video lectures, tasks, and text materials. All courses viewed by
         you
         are displayed in your personal account</p>
-      <form action="#" class="main__form form">
-        <input class="form__search-input" type="text" name="search" id="search" aria-label="Search"
+      <form action="#" class="main__search search">
+        <input class="search__input input" type="text" name="search" id="search" aria-label="Search"
           placeholder="Search">
-        <label class="form__country country">
+        <label class="search__country country">
           <span class="country__title">Your country</span>
           <select class="country__select" name="country" id="country">
             <option value="usa">USA</option>
@@ -108,8 +108,8 @@
                 <p class="description__text">30 minutes</p>
             </ul>
             <div class="card__buttons">
-              <button class="card__button card__button--bordered">Continue</button>
-              <button class="card__button">More</button>
+              <button class="button button--bordered">Continue</button>
+              <button class="button">More</button>
             </div>
           </article>
         </li>
@@ -158,8 +158,8 @@
                 <p class="description__text">30 minutes</p>
             </ul>
             <div class="card__buttons">
-              <button class="card__button card__button--bordered">Continue</button>
-              <button class="card__button">More</button>
+              <button class="button button--bordered">Continue</button>
+              <button class="button">More</button>
             </div>
           </article>
         </li>
@@ -209,14 +209,44 @@
               </li>
             </ul>
             <div class="card__buttons">
-              <button class="card__button card__button--bordered">Continue</button>
-              <button class="card__button">More</button>
+              <button class="button button--bordered">Continue</button>
+              <button class="button">More</button>
             </div>
           </article>
         </li>
       </ul>
-    </div>
+    </section>
 
+    <section class="profile">
+      <div class="profile__wrapper">
+        <header class="profile__header">
+          <h2 class="profile__title">Profile</h2>
+          <ul class="profile__navigation navigation">
+            <li class="navigation__item">
+              <a href="#" class="navigation__link">Registration</a>
+            </li>
+            <li class="navigation__item">
+              <a href="#" class="navigation__link">Sign in</a>
+            </li>
+          </ul>
+        </header>
+
+        <section class="profile__social social">
+          <h3 class="social__title">You can sign in with social</h3>
+          <ul class="social__list">
+            <li class="social__item">
+              <a href="#" class="social__link"></a>
+            </li>
+            <li class="social__item">
+              <a href="#" class="social__link"></a>
+            </li>
+            <li class="social__item">
+              <a href="#" class="social__link"></a>
+            </li>
+          </ul>
+        </section>
+      </div>
+    </section>
   </main>
 </body>
 

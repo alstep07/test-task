@@ -14,6 +14,95 @@ a {
 select::-ms-expand {
   display: none;
 }
+.input {
+  width: 100%;
+  padding: 1rem 2.5rem;
+  font: 400 1rem / 1.5rem 'Roboto', sans-serif;
+  border: none;
+  border-radius: 4px;
+  background: no-repeat url('../../images/icons/search.svg') 1rem;
+  outline: none;
+  box-shadow: 0px 4px 16px 0px rgba(51, 51, 51, 0.08), 0px 4px 4px 0px rgba(51, 51, 51, 0.04);
+}
+.input:focus {
+  box-shadow: 0 0 0 2px #6e41e2;
+}
+.button {
+  padding: 0.625rem 1.25rem;
+  font: 400 1rem / 1.5rem 'Roboto', sans-serif;
+  color: #6e41e2;
+  background-color: transparent;
+  border: 2px solid transparent;
+  border-radius: 4px;
+  cursor: pointer;
+}
+@media (min-width: 1024px) {
+  .button:hover {
+    color: #fff;
+    background-color: #6e41e2;
+  }
+}
+.button--bordered {
+  border-color: #6e41e2;
+}
+.profile {
+  z-index: 2;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(241, 241, 241, 0.9);
+}
+.profile__wrapper {
+  width: 100%;
+  max-width: 29.625rem;
+  padding: 2rem 0;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0px 4px 16px 0px rgba(51, 51, 51, 0.08), 0px 4px 4px 0px rgba(51, 51, 51, 0.04);
+}
+.profile__header {
+  padding: 0 2rem;
+  border-bottom: 1px solid #f1f1f1;
+}
+.profile__navigation.navigation {
+  justify-content: start;
+  padding: 1rem 0;
+}
+.profile__navigation.navigation .navigation__link::after {
+  top: 2.45rem;
+}
+.profile__title {
+  margin: 0;
+  font: 700 2rem / 2.5rem 'Montserrat', sans-serif;
+}
+.social {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 2rem;
+  background-color: #fafafa;
+}
+.social__title {
+  margin: 0;
+  font: 400 0.8rem / 1.25rem 'Roboto', sans-serif;
+  color: #000;
+}
+.social__list {
+  display: flex;
+  gap: 0.5rem;
+}
+.social__link {
+  display: block;
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: 100%;
+  background-color: #fff;
+}
 .header {
   width: 100%;
   box-shadow: 0px 1px 0px 0px rgba(51, 51, 51, 0.1);
@@ -32,19 +121,19 @@ select::-ms-expand {
   color: #111;
   text-decoration: none;
 }
-.navigation {
+.header__navigation {
   width: 100%;
   margin: 1.5rem 0 0;
   order: 1;
 }
 @media (min-width: 670px) {
-  .navigation {
+  .header__navigation {
     margin: 0 3.5rem 0 auto;
     width: auto;
     order: 0;
   }
 }
-.navigation__list {
+.navigation {
   display: flex;
   justify-content: center;
 }
@@ -113,7 +202,7 @@ select::-ms-expand {
     padding-left: 3.125rem;
   }
 }
-.main__wrapper {
+.main__content {
   max-width: 1295px;
   margin: auto;
 }
@@ -126,36 +215,23 @@ select::-ms-expand {
   margin: 0.75rem 0 0;
   font: 400 1rem / 1.5rem 'Roboto', sans-serif;
 }
-.main__form {
+.main__search {
   margin-top: 2rem;
 }
-.form {
+.search {
   display: flex;
   flex-direction: column;
 }
 @media (min-width: 670px) {
-  .form {
+  .search {
     flex-direction: row;
   }
 }
-.form__search-input {
-  width: 100%;
-  padding: 1rem 2.5rem;
-  font: 400 1rem / 1.5rem 'Roboto', sans-serif;
-  border: none;
-  border-radius: 4px;
-  background: no-repeat url('../../images/icons/search.svg') 1rem;
-  outline: none;
-  box-shadow: 0px 4px 16px 0px rgba(51, 51, 51, 0.08), 0px 4px 4px 0px rgba(51, 51, 51, 0.04);
-}
-.form__search-input:focus {
-  box-shadow: 0 0 0 2px #6e41e2;
-}
-.form__country {
+.search__country {
   margin-top: 1rem;
 }
 @media (min-width: 670px) {
-  .form__country {
+  .search__country {
     margin-top: 0;
     margin-left: 1.25rem;
   }
@@ -286,24 +362,6 @@ select::-ms-expand {
   position: absolute;
   bottom: 1.25rem;
   left: 1.25rem;
-}
-.card__button {
-  padding: 0.625rem 1.25rem;
-  font: 400 1rem / 1.5rem 'Roboto', sans-serif;
-  color: #6e41e2;
-  background-color: transparent;
-  border: 2px solid transparent;
-  border-radius: 4px;
-  cursor: pointer;
-}
-@media (min-width: 1024px) {
-  .card__button:hover {
-    color: #fff;
-    background-color: #6e41e2;
-  }
-}
-.card__button--bordered {
-  border-color: #6e41e2;
 }
 .description {
   display: flex;

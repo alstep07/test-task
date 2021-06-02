@@ -1,0 +1,68 @@
+// main: ../style.less
+
+.profile {
+  z-index: 2;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: fadeout(@bg-color, 10%);
+
+  &__wrapper {
+    width: 100%;
+    max-width: 29.625rem;
+    padding: 2rem 0;
+    background-color: @form-bg-color;
+    border-radius: 8px;
+    .shadow();
+  }
+
+  &__header {
+    padding: 0 2rem;
+    border-bottom: 1px solid @bg-color;
+  }
+
+  &__navigation.navigation {
+    justify-content: start;
+    padding: 1rem 0;
+
+    .navigation__link::after {
+      top: 2.45rem;
+    }
+  }
+
+  &__title {
+    margin: 0;
+    font: 700 2rem / 2.5rem @font-primary;
+  }
+}
+
+.social {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: .75rem 2rem;
+  background-color: @social-bg-color;
+
+  &__title {
+    margin: 0;
+    font: 400 .8rem / 1.25rem @font-secondary;
+    color: #000;
+  }
+
+  &__list {
+    display: flex;
+    gap: .5rem;
+  }
+
+  &__link {
+    display: block;
+    .circle(2.25rem);
+    background-color: @form-bg-color;
+  }
+
+}

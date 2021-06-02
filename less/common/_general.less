@@ -19,3 +19,39 @@ a {
 select::-ms-expand {
   display: none;
 }
+
+.input {
+  width: 100%;
+  padding: 1rem 2.5rem;
+  font: 400 1rem / 1.5rem @font-secondary;
+  border: none;
+  border-radius: 4px;
+  background: no-repeat url('../../images/icons/search.svg') 1rem ;
+  outline: none;
+  .shadow();
+
+  &:focus {
+    box-shadow: 0 0 0 2px @primary-color;
+  }
+}
+
+.button {
+  padding: .625rem 1.25rem;
+  font: 400 1rem / 1.5rem @font-secondary;
+  color: @primary-color;
+  background-color: transparent;
+  border: 2px solid transparent;
+  border-radius: 4px;
+  cursor: pointer;
+
+  @media @desktop {
+    &:hover {
+      color: @text-color-light;
+      background-color: @primary-color;
+    }
+  }
+
+  &--bordered {
+    border-color: @primary-color;
+  }
+}
