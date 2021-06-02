@@ -83,6 +83,12 @@ select::-ms-expand {
   display: flex;
   align-items: center;
 }
+.user:hover .user__name {
+  color: #111;
+}
+.user:hover .user__photo {
+  box-shadow: 0 0 0 2px #6e41e2;
+}
 .user__name {
   margin-right: 0.75rem;
   font: 400 1rem / 1.5rem 'Montserrat', sans-serif;

@@ -77,6 +77,14 @@
   display: flex;
   align-items: center;
 
+  &:hover &__name {
+    color: @text-color-dark;
+  }
+
+  &:hover &__photo {
+    box-shadow: 0 0 0 2px @primary-color;
+  }
+
   &__name {
     margin-right: 0.75rem;
     font: 400 1rem / 1.5rem @font-primary;
