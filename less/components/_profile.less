@@ -39,6 +39,14 @@
     margin: 0;
     font: 700 2rem / 2.5rem @font-primary;
   }
+
+  &__form {
+    margin-top: .25rem;
+    padding: 1.25rem 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+  }
 }
 
 .social {
@@ -62,7 +70,20 @@
   &__link {
     display: block;
     .circle(2.25rem);
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: @form-bg-color;
-  }
 
+    @media @desktop {
+      &:hover {
+        background-color: @social-bg-color;
+      }
+    }
+  }
 }
+
+.form__input {
+  padding: 1rem;
+}
+
