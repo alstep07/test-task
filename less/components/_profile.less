@@ -1,24 +1,26 @@
 // main: ../style.less
 
 .profile {
-  z-index: 2;
-  position: fixed;
-  top: 0;
-  left: 0;
   width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: fadeout(@bg-color, 10%);
+  background-color: @bg-color;
 
   &__wrapper {
     width: 100%;
-    max-width: 29.625rem;
+    min-height: 100vh;
     padding: 2rem 0;
     background-color: @form-bg-color;
     border-radius: 8px;
     .shadow();
+
+    @media @tablet {
+      margin: 2rem 0;
+      width: 29.625rem;
+      min-height: 0;
+    }
   }
 
   &__header {
@@ -41,8 +43,8 @@
   }
 
   &__form {
-    margin-top: .25rem;
-    padding: 1.25rem 2rem;
+    margin-top: 1.5rem;
+    padding: 0 2rem;
     display: flex;
     flex-direction: column;
     gap: 1.25rem;
@@ -83,7 +85,46 @@
   }
 }
 
-.form__input {
-  padding: 1rem;
+.form {
+  &__input {
+    padding: 1rem;
+  }
+
+  &__policy {
+    margin-bottom: .75rem;
+  }
 }
 
+.policy {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+
+  &__input {
+    .visually-hidden();
+  }
+
+  &__input:checked + &__box {
+    background: no-repeat url('../../images/icons/check.svg') center;
+  }
+
+  &__box {
+    display: block;
+    margin-right: 0.75rem;
+    min-width: 1.5rem;
+    width: 1.5rem;
+    height: 1.5rem;
+    border: 1px solid #d4d4d4;
+    border-radius: 4px;
+  }
+
+  &__description {
+    font: 400 1rem / 1.5rem @font-secondary;
+    color: @text-color-dark;
+  }
+
+  &__link {
+    color: @primary-color;
+  }
+
+}

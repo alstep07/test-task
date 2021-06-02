@@ -25,6 +25,9 @@ a {
 select::-ms-expand {
   display: none;
 }
+.hidden {
+  display: none !important;
+}
 .input {
   width: 100%;
   font: 400 1rem / 1.5rem 'Roboto', sans-serif;
@@ -46,33 +49,44 @@ select::-ms-expand {
   cursor: pointer;
 }
 @media (min-width: 1024px) {
-  .button:hover {
-    color: #fff;
-    background-color: #6e41e2;
+  .button--simple:hover {
+    text-decoration: underline;
+  }
+  .button--filled:hover:hover {
+    color: #6e41e2;
+    background-color: transparent;
   }
 }
 .button--bordered {
   border-color: #6e41e2;
 }
+.button--filled {
+  color: #fff;
+  background-color: #6e41e2;
+  border-color: #6e41e2;
+}
 .profile {
-  z-index: 2;
-  position: fixed;
-  top: 0;
-  left: 0;
   width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: rgba(241, 241, 241, 0.9);
+  background-color: #f1f1f1;
 }
 .profile__wrapper {
   width: 100%;
-  max-width: 29.625rem;
+  min-height: 100vh;
   padding: 2rem 0;
   background-color: #fff;
   border-radius: 8px;
   box-shadow: 0px 4px 16px 0px rgba(51, 51, 51, 0.08), 0px 4px 4px 0px rgba(51, 51, 51, 0.04);
+}
+@media (min-width: 670px) {
+  .profile__wrapper {
+    margin: 2rem 0;
+    width: 29.625rem;
+    min-height: 0;
+  }
 }
 .profile__header {
   padding: 0 2rem;
@@ -90,8 +104,8 @@ select::-ms-expand {
   font: 700 2rem / 2.5rem 'Montserrat', sans-serif;
 }
 .profile__form {
-  margin-top: 0.25rem;
-  padding: 1.25rem 2rem;
+  margin-top: 1.5rem;
+  padding: 0 2rem;
   display: flex;
   flex-direction: column;
   gap: 1.25rem;
@@ -129,6 +143,44 @@ select::-ms-expand {
 }
 .form__input {
   padding: 1rem;
+}
+.form__policy {
+  margin-bottom: 0.75rem;
+}
+.policy {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.policy__input {
+  position: absolute;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+}
+.policy__input:checked + .policy__box {
+  background: no-repeat url('../../images/icons/check.svg') center;
+}
+.policy__box {
+  display: block;
+  margin-right: 0.75rem;
+  min-width: 1.5rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  border: 1px solid #d4d4d4;
+  border-radius: 4px;
+}
+.policy__description {
+  font: 400 1rem / 1.5rem 'Roboto', sans-serif;
+  color: #111;
+}
+.policy__link {
+  color: #6e41e2;
 }
 .header {
   width: 100%;

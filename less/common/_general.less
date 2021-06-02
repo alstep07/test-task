@@ -20,6 +20,10 @@ select::-ms-expand {
   display: none;
 }
 
+.hidden {
+  display: none !important;
+}
+
 .input {
   width: 100%;
   font: 400 1rem / 1.5rem @font-secondary;
@@ -44,13 +48,25 @@ select::-ms-expand {
   cursor: pointer;
 
   @media @desktop {
-    &:hover {
-      color: @text-color-light;
-      background-color: @primary-color;
+    &--simple:hover {
+      text-decoration: underline;
+    }
+
+    &--filled:hover {
+      &:hover {
+        color: @primary-color;
+        background-color: transparent;
+      }
     }
   }
 
   &--bordered {
+    border-color: @primary-color;
+  }
+
+  &--filled {
+    color: @text-color-light;
+    background-color: @primary-color;
     border-color: @primary-color;
   }
 }
