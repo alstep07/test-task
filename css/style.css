@@ -164,7 +164,7 @@ select::-ms-expand {
   margin: -1px;
 }
 .policy__input:checked + .policy__box {
-  background: no-repeat url('../../images/icons/check.svg') center;
+  background: no-repeat url('../images/icons/check.svg') center;
 }
 .policy__box {
   display: block;
@@ -308,7 +308,7 @@ select::-ms-expand {
 }
 .search__input {
   padding: 1rem 1rem 1rem 2.5rem;
-  background: no-repeat url('../../images/icons/search.svg') 1rem;
+  background: no-repeat url('../images/icons/search.svg') 1rem;
 }
 .search__country {
   margin-top: 1rem;
